@@ -1,0 +1,11 @@
+# Copy this rule file to /etc/udev/rules.d in order to use this script without sudo
+
+# allow r/w access by all local/physical sessions (seats)
+# https://github.com/systemd/systemd/issues/4288
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="17cc", ATTRS{idProduct}=="1011", TAG+="uaccess"
+
+# allow r/w access by users of the plugdev group
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="17cc", ATTRS{idProduct}=="1011", GROUP="plugdev", MODE="0660"
+
+# allow r/w access by all users
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="17cc", ATTRS{idProduct}=="1011", MODE="0660"
