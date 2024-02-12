@@ -33,8 +33,8 @@ import usb.util
 VENDOR         = 0x17cc
 PRODUCT        = 0x1011 # Product ID may also be 0x1010. I don't have that version and cannot test if this script works with it.
 
-CTRL_SET_THRU  = 1
-CTRL_SET_PHONO = 2
+CTRL_SET_PHONO = 1
+CTRL_SET_THRU  = 2
 
 TA6_CHANNEL_A  = 3
 TA6_CHANNEL_B  = 5
